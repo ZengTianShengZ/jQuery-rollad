@@ -25,14 +25,13 @@
             if(self.rollFlag){
                 self.rollFlag = false;
                 self.rotateAnimate('next');
-                console.log("..gg.nowflag... 111.");
+
             }
         });
 
 
     };
     RollAd.prototype = {
-
 
         initPosition:function () {
 
@@ -72,68 +71,29 @@
 
                 this.nowflag = 0;
 
+            }else if(parseInt(this.nowflag) < 0){
+
+                this.nowflag = 6;
             }
+            console.log(".... this.nowflag...."+  this.nowflag);
             var nowEle = this.rollItems.eq(this.nowflag).removeAttr('nowflag');
-            console.log("..xxxxxxxxxxxxFFGG...."+this.nowflag );
             var that = this;
+            var nextEle =  nowEle.next().get(0)? nowEle.next() : this.firstRollItem;
+            var prev = nowEle.prev().get(0)? nowEle.prev() : this.lastRollItem;
+
             if(type == 'next'){
-
-                var nextEle =  nowEle.next().get(0)? nowEle.next() : this.firstRollItem;
                 var nextEleTwo =  nextEle.next().get(0)? nextEle.next() : this.firstRollItem;
-                var prev = nowEle.prev().get(0)? nowEle.prev() : this.lastRollItem;
 
-                var     width = nextEle.css("width"),
-                        height = nextEle.css("height"),
-                        zIndex = nextEle.css("zIndex"),
-                        opacity = nextEle.css("opacity"),
-                        left = nextEle.css("left"),
-                        top = nextEle.css("top");
-
-                nextEleTwo.animate({ 
-                    "width":width,
-                    "height":height,
-                    "zIndex":zIndex,
-                    "left":left,
-                    "opacity":opacity,
-                    "top":top
-                },1000,function () {
+                nextEleTwo.animate(this.getEleCss(nextEle),1000,function () {
                     that.rollFlag = true;
                 });
 
-                var width1 = nowEle.css("width"),
-                    height1 = nowEle.css("height"),
-                    zIndex1 = nowEle.css("zIndex"),
-                    opacity = nowEle.css("opacity"),
-                    left1 = nowEle.css("left"),
-                    top1 = nowEle.css("top") ;
-
-                nextEle.animate({
-                    "width":width1,
-                    "height":height1,
-                    "zIndex":zIndex1,
-                    "left":left1,
-                    "opacity":opacity,
-                    "top":top1
-                },1000,function () {
+                nextEle.animate(this.getEleCss(nowEle),1000,function () {
                     that.rollFlag = true;
                 }).attr('nowflag',++this.nowflag);
 
-
-                var width2 = prev.css("width"),
-                    height2 = prev.css("height"),
-                    zIndex2 = prev.css("zIndex"),
-                    opacity = prev.css("opacity"),
-                    left2 = prev.css("left"),
-                    top2 = prev.css("top") ;
-                nowEle.css("zIndex","22");
-                nowEle.animate({
-                    "width":width2,
-                    "height":height2,
-                    "zIndex":zIndex2,
-                    "left":left2,
-                    "opacity":opacity,
-                    "top":top2
-                },1000,function () {
+                nowEle.css("opacity","22");
+                nowEle.animate(this.getEleCss(prev),1000,function () {
                     that.rollFlag = true;
                 });
 
@@ -148,6 +108,53 @@
                     that.rollFlag = true;
                 });
 
+            }
+
+            if(type =='prev'){
+                var prevEleTwo =  prev.prev().get(0)? prev.prev() : this.lastRollItem;
+
+
+                prevEleTwo.animate(this.getEleCss(prev),1000,function () {
+                    that.rollFlag = true;
+                });
+
+                prev.animate(this.getEleCss(nowEle),1000,function () {
+                    that.rollFlag = true;
+                }).attr('nowflag',--this.nowflag);
+
+               // nowEle.css("opacity","22");
+                nowEle.animate(this.getEleCss(nextEle),1000,function () {
+                    that.rollFlag = true;
+                });
+
+                nextEle.animate({
+                    "width":"520px",
+                    "height":"220px",
+                    "zIndex":0,
+                    "left":"140px",
+                    "opacity":0,
+                    "top":"10px"
+                },1000,function () {
+                    that.rollFlag = true;
+                });
+
+            }
+        },
+        getEleCss:function (ele) {
+            var     width = ele.css("width"),
+                height = ele.css("height"),
+                zIndex = ele.css("zIndex"),
+                opacity = ele.css("opacity"),
+                left = ele.css("left"),
+                top = ele.css("top");
+
+            return {
+                "width":width,
+                "height":height,
+                "zIndex":zIndex,
+                "left":left,
+                "opacity":opacity,
+                "top":top
             }
         }
 
