@@ -16,10 +16,10 @@
        this.rollItemLen =  this.rollItems.length;
         //默认参数
         this.setting = {
-            "width":700,
-            "height":150,
-            "liWidth":320,
-            "liHeight":120,
+            "width":800,
+            "height":250,
+            "liWidth":520,
+            "liHeight":220,
             "delay":1000
         }
         //自定义参数与默认参数合并，jq 的 extend 方法
