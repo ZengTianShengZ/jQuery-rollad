@@ -11,6 +11,7 @@
 
         this.prevBtn =  rollAd.find('.roll-prev-btn');
         this.nextBtn =  rollAd.find('.roll-next-btn');
+        this.rollBtn =  rollAd.find('.roll-btn');
 
        this.rollItemLen =  this.rollItems.length;
         //默认参数
@@ -44,8 +45,11 @@
         this.autoRoll();
         this.rollAd.hover(function(){
             clearInterval(self.timer);
+            self.rollBtn.fadeIn(600);
         },function(){
             self.autoRoll();
+            self.rollBtn.fadeOut(600);
+
         });
 
     };
@@ -80,7 +84,6 @@
                 "top":0
             }).attr('nowflag','0');
 
-            console.log("..gg.nowflag... 000.");
             this.secondRollItem.css({
                 "left":rollWidth - liWidth,
                 "opacity":0.5,
@@ -197,7 +200,7 @@
             }
         },
         getSetting:function () {
-            var setting = this.rollAd.attr('ata-setting');
+            var setting = this.rollAd.attr('data-setting');
             if(setting != undefined){
                 // 解析 json ，返回 obj  ， javascript 的 json 数据 跟对象一样一样的
                 return $.parseJSON(setting);
