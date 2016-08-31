@@ -1,0 +1,56 @@
+/**一些初始化*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content: '';}
+abbr,acronym{border:0;}
+body{color:#666; background-color:#fff;font: 12px/1.5 '΢���ź�',tahoma,arial,'Hiragino Sans GB',����,sans-serif;}
+.clearfix:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clearfix {zoom:1;}
+
+/*****   轮播广告  *******/
+.rollad{
+    width: 800px;
+    height: 250px;
+    margin: 50px auto;
+    border: 1px solid red;
+    position: relative;
+}
+.rollad .roll-list{
+    width: 800px;
+    height: 250px;
+}
+.rollad .roll-list .roll-item{
+    width: 520px;
+    height: 220px;
+    position: absolute;
+    top: 10px;
+    left: 140px;
+
+}
+
+.rollad .roll-btn{
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    top: 80px;
+    z-index: 22;
+
+}
+.rollad .roll-btn img{
+    width: 30px;
+    height: 68px;
+    display: block;
+}
+.rollad .roll-btn .roll-prev-btn{
+  float: left;
+}
+.rollad .roll-btn .roll-next-btn{
+    float: right;
+}
+
+
