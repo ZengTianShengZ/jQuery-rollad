@@ -6,51 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery广告自动轮番插件</title>
     <link type="text/css" rel="stylesheet" href="css/roll-ad.css">
-    <style type="text/css">
-
-    </style>
     <!--[if IE]>
     <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
     <![endif]-->
 </head>
 <body>
 
-    <article class="jq-roll">
-
-        <div class="rollad" data-setting ='{
+<article class="jq-roll">
+    <div class="rollad" data-setting='{
             "width":800,
             "height":250,
             "liWidth":520,
             "liHeight":220,
             "delay":1000
         }'>
+        <ul class="roll-list">
+            <li class="roll-item"><img src="images/gimg_1.jpg" width="100%" height="100%"></li>
+            <li class="roll-item"><img src="images/gimg_2.jpg" width="100%" height="100%"></li>
+            <li class="roll-item"><img src="images/gimg_3.jpg" width="100%" height="100%"></li>
+            <li class="roll-item"><img src="images/gimg_4.jpg" width="100%" height="100%"></li>
+            <li class="roll-item"><img src="images/gimg_5.jpg" width="100%" height="100%"></li>
+            <li class="roll-item"><img src="images/gimg_6.jpg" width="100%" height="100%"></li>
+            <li class="roll-item"><img src="images/gimg_7.jpg" width="100%" height="100%"></li>
+        </ul>
 
-            <ul class = "roll-list">
-                <li class = "roll-item"><img src="images/gimg_1.jpg" width = "100%" height="100%"></li>
-                <li class = "roll-item"><img src="images/gimg_2.jpg" width = "100%" height="100%"></li>
-                <li class = "roll-item"><img src="images/gimg_3.jpg" width = "100%" height="100%"></li>
-                <li class = "roll-item"><img src="images/gimg_4.jpg" width = "100%" height="100%"></li>
-                <li class = "roll-item"><img src="images/gimg_5.jpg" width = "100%" height="100%"></li>
-                <li class = "roll-item"><img src="images/gimg_6.jpg"  width = "100%" height="100%"></li>
-                <li class = "roll-item"><img src="images/gimg_7.jpg"  width = "100%" height="100%"></li>
-            </ul>
-
-
-            <div class="roll-btn">
-                <img src="images/r_left_btn.png"  class="roll-prev-btn" />
-                <img src="images/r_right_btn.png" class="roll-next-btn" />
-            </div>
-
+        <div class="roll-btn">
+            <img src="images/r_left_btn.png" class="roll-prev-btn"/>
+            <img src="images/r_right_btn.png" class="roll-next-btn"/>
         </div>
+    </div>
+</article>
 
-    </article>
 
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/jquery.roll-ad.js"></script>
 
-    <script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/jquery.roll-ad.js"></script>
-
-    <script>
-        RollAd.init($('.rollad'));
-    </script>
-
+<script>
+    RollAd.init($('.rollad'));
+</script>
 </body>

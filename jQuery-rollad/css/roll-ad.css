@@ -29,7 +29,6 @@ body{color:#666; background-color:#fff;font: 12px/1.5 '΢���ź�',tahoma,
     position: absolute;
     top: 10px;
     left: 140px;
-
 }
 
 .rollad .roll-btn{
@@ -39,7 +38,6 @@ body{color:#666; background-color:#fff;font: 12px/1.5 '΢���ź�',tahoma,
     top: 80px;
     z-index: 22;
     display: none;
-
 }
 .rollad .roll-btn img{
     width: 30px;
@@ -52,5 +50,3 @@ body{color:#666; background-color:#fff;font: 12px/1.5 '΢���ź�',tahoma,
 .rollad .roll-btn .roll-next-btn{
     float: right;
 }
-
-

@@ -1,5 +1,5 @@
 
-(function ($) {
+;(function ($) {
 
     var RollAd = function (rollAd) {
         var self = this;
@@ -207,48 +207,15 @@
             }else{
                 return {} ;
             }
-
         }
-
-
     };
 
     RollAd.init = function (rollAd) {
         rollAd.each(function (index,ele) {
-
             new RollAd($(this));
-
         });
     };
 
     window['RollAd'] = RollAd;
 
-})(jQuery)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})(jQuery);

@@ -1,5 +1,5 @@
 #jQuery-rollad
-##广告轮番图--模仿网易云音乐的广告轮番图
+##广告轮番图--模仿网易云音乐的广告轮播图
 
 ###这是网易音乐的效果图：
 ![wangyi](https://raw.githubusercontent.com/ZengTianShengZ/jQuery-rollad/master/jQuery-rollad/images/wangyi.png) 
@@ -7,7 +7,7 @@
 ###这是轮播插件的效果图：
  ![rollAD](https://raw.githubusercontent.com/ZengTianShengZ/jQuery-rollad/master/jQuery-rollad/images/rollad.png) 
 
-你只需将项目的 html 模板插入到你的html页面中：
+只需将项目的 html 模板插入到你的html页面中：
 
 ```
   <article class="jq-roll">
