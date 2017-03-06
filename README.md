@@ -5,7 +5,7 @@
 ![wangyi](https://raw.githubusercontent.com/ZengTianShengZ/jQuery-rollad/master/jQuery-rollad/images/wangyi.png)
 
 ###这是轮播插件的效果图：
- ![rollAD](./images/rolladimg.png)
+ ![rollADx](https://raw.githubusercontent.com/ZengTianShengZ/jQuery-rollad/master/jQuery-rollad/images/rolladimg.png)
 
 只需将项目的 html 模板插入到你的html页面中：
 
