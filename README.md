@@ -2,10 +2,10 @@
 ##广告轮番图--模仿网易云音乐的广告轮播图
 
 ###这是网易音乐的效果图：
-![wangyi](https://raw.githubusercontent.com/ZengTianShengZ/jQuery-rollad/master/jQuery-rollad/images/wangyi.png) 
+![wangyi](https://raw.githubusercontent.com/ZengTianShengZ/jQuery-rollad/master/jQuery-rollad/images/wangyi.png)
 
 ###这是轮播插件的效果图：
- ![rollAD](https://raw.githubusercontent.com/ZengTianShengZ/jQuery-rollad/master/jQuery-rollad/images/rollad.png) 
+ ![rollAD](./images/rolladimg.png)
 
 只需将项目的 html 模板插入到你的html页面中：
 
@@ -41,4 +41,3 @@ body底部加入 script 脚本即可
             "delay":1000
         }'>
 ```
-
